@@ -176,7 +176,7 @@ public class SecurePreferences implements SharedPreferences {
                     .getDefaultSharedPreferences(context);
         }
         else{
-          return context.getSharedPreferences(prefFilename, Context.MODE_PRIVATE);
+          return context.getSharedPreferences(prefFilename, Context.MODE_MULTI_PROCESS | Context.MODE_PRIVATE);
         }
     }
 
